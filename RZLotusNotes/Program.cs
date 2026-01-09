@@ -35,7 +35,6 @@ string tenantUrl = xd1.Element("UploadConfig")?.Element("tenantURL")?.Value;
 string expTemplateID = xd1.Element("UploadConfig")?.Element("experimentTemplate")?.Value;
 string sourceFilesLocation = xd1.Element("UploadConfig")?.Element("sourceFilesLocation")?.Value;
 string attachmentsPath = xd1.Element("UploadConfig")?.Element("sourceFilesAttachmentsLocation")?.Value;
-string reportOnly = xd1.Element("UploadConfig")?.Element("reportOnly")?.Value ?? "0"; // Default to "0" if not found
 int closeFlag = 0;
 var closeNode = xd1.Element("UploadConfig")?.Element("closeExperiments");
 if (closeNode != null && int.TryParse(closeNode.Value, out int parsed))
